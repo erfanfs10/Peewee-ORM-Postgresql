@@ -1,0 +1,5 @@
+local_*.py
+__pycache__
+*.pyc
+.idea/
+.vscode/

@@ -1,5 +1,6 @@
 from peewee import *
 from models import Device
+from local_setting import DB_NAME, DB_UESR, DB_PASSWORD
 
 
 class DatabaseManager:
@@ -8,13 +9,16 @@ class DatabaseManager:
 
     def connect(self):
         self.database.connect()
+        Device._meta.database = self.database
+        self.database.create_tables([Device])
+        
         
     def disconnect(self):
         self.database.close()
 
 
 
-database_manager = DatabaseManager('YOUR DB NAME', 'DB USER NAME', 'PASSWORD')
+database_manager = DatabaseManager(DB_NAME, DB_UESR, DB_PASSWORD)
 database_manager.connect()
 database_manager.disconnect()
 
