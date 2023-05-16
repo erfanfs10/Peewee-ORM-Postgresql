@@ -14,6 +14,6 @@ class Device(BaseModel):
     
 
     class Meta:
-        table_name = "Devices"
+        table_name = "devices"
         
         
