@@ -1,8 +1,5 @@
 from peewee import *
-
-class BaseModel(Model):
-    class Meta:
-        database = None
+from models import Device
 
 
 class DatabaseManager:
