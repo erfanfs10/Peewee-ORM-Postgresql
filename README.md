@@ -16,8 +16,9 @@ in main.py file
 4.
 add your models in models.py
 
-4.
+5.
 run python main.py create   to add tables to your database
+
 
 you can update , delete , select , create and drop_table and also create CSV file 
 
