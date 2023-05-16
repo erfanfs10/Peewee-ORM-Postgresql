@@ -4,7 +4,7 @@ from models import DeviceManager, Device
 import sys
 
 
-database_manager = DatabaseManager('test', "erfan", "852")
+database_manager = DatabaseManager('DATABASE_NAME', "USERNAME", "PASSWORD")
 database_manager.connect()
 device = DeviceManager()
 
