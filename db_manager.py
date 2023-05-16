@@ -1,5 +1,6 @@
 from peewee import *
 from models import Device
+import sys
 
 
 class DatabaseManager:
@@ -8,7 +9,11 @@ class DatabaseManager:
                                             password=password, host=host, port=port
                                             )
     def connect(self):
-        self.database.connect()
+        try:
+            self.database.connect()
+        except:
+            print("can not connect to database!!") 
+            sys.exit()   
         Device._meta.database = self.database
         self.database.create_tables([Device])
         
