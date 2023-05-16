@@ -12,6 +12,5 @@ class DatabaseManager:
         Device._meta.database = self.database
         self.database.create_tables([Device])
         
-        
     def disconnect(self):
         self.database.close()
